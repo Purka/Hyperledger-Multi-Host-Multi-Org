@@ -30,12 +30,6 @@ services:
     volumes:
       - ../crypto-config/peerOrganizations/org2.example.com/ca/:/etc/hyperledger/fabric-ca-server-config
       - /var/run/docker.sock:/var/run/docker.sock
-    # extra_hosts:
-    #   - "peer0.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "peer1.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "ca.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "orderer.example.com:"INSERT_HOST1_ADDRES""
-    #container_name: ca2
     deploy:
       mode: replicated
       replicas: 1
@@ -105,11 +99,6 @@ services:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/:/etc/hyperledger/crypto/peerOrg2
         - ../crypto-config/peerOrganizations/org2.example.com/users:/etc/hyperledger/crypto/users
-    # extra_hosts:
-    #   - "peer0.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "peer1.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "ca.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "orderer.example.com:"INSERT_HOST1_ADDRES""
     deploy:
       mode: replicated
       replicas: 1
@@ -182,11 +171,6 @@ services:
         - /var/run/:/host/var/run/
         - ../crypto-config/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/:/etc/hyperledger/crypto/peerOrg2
         - ../crypto-config/peerOrganizations/org2.example.com/users:/etc/hyperledger/crypto/users
-    # extra_hosts:
-    #   - "peer0.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "peer1.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "ca.org1.example.com:"INSERT_HOST1_ADDRES""
-    #   - "orderer.example.com:"INSERT_HOST1_ADDRES""
     deploy:
       mode: replicated
       replicas: 1
