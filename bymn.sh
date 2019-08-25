@@ -189,8 +189,8 @@ function replacePrivateKey() {
   fi
 
   # Copy the org1 & org2 templates to the files that will be modified to add the private key
-  cp docker-compose-org1-template.yaml docker-compose-org1.yaml
-  cp docker-compose-org2-template.yaml docker-compose-org2.yaml
+  cp templates/docker-compose-org1-template.yaml docker-compose-org1.yaml
+  cp templates/docker-compose-org2-template.yaml docker-compose-org2.yaml
 
   # The next steps will replace the template's contents with the
   # actual values of the private key file names for the two CAs.
