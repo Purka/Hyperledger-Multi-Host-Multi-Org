@@ -38,7 +38,7 @@ services:
         condition: on-failure
       placement:
           constraints:
-            - node.hostname == "INSERT_HOST1_NAME"
+            - node.hostname == INSERT_HOST1_NAME
     ports:
      - published: 7054
        target: 7054
@@ -86,7 +86,7 @@ services:
         condition: on-failure
       placement:
           constraints:
-            - node.hostname == "INSERT_HOST1_NAME"
+            - node.hostname == INSERT_HOST1_NAME
     ports:
       - published: 7050
         target: 7050
@@ -155,7 +155,7 @@ services:
         condition: on-failure
       placement:
           constraints:
-            - node.hostname == "INSERT_HOST1_NAME"
+            - node.hostname == INSERT_HOST1_NAME
     ports:
       - published: 7051
         target: 7051
@@ -227,7 +227,7 @@ services:
         condition: on-failure
       placement:
           constraints:
-            - node.hostname == "INSERT_HOST1_NAME"
+            - node.hostname == INSERT_HOST1_NAME
     ports:
       - published: 8051
         target: 7051
@@ -252,7 +252,7 @@ services:
         condition: on-failure
       placement:
           constraints:
-            - node.hostname == "INSERT_HOST1_NAME"
+            - node.hostname == INSERT_HOST1_NAME
     environment:
       - GOPATH=/opt/gopath
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
